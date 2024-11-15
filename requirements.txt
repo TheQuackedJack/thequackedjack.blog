@@ -1,0 +1,4 @@
+# TODO: Add in versions and organize later
+# Also look into dependency upgrading tools
+Jinja2
+pydantic
