@@ -38,6 +38,8 @@ def build_post(post_context: dict, page_name: str):
         
     # TODO: add in a bit of code for ensuring the slug of the file name will follow good practices for SEO
     # probably want to use a regex
+    # can use awesome-slugify for this task
+
 
     # Log the rendering process
     logging.info("Rendering HTML for page: %s", page_name)
