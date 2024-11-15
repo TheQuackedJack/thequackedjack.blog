@@ -4,27 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ seo_description }}">
-    <meta name="keywords" content="{{keywords|}}">
+    <meta name="keywords" content="{{ keywords }}">
     <meta name="author" content="{{ author }}">
-    <title> {{ title }}</title>
+    <title>{{ title }}</title>
 
     <!-- Open Graph / Social Media Tags -->
     <meta property="og:title" content="{{ og_title }}">
     <meta property="og:description" content="{{ og_description }}">
     <meta property="og:image" content="{{ og_image }}">
-    <meta property="og:url" content="{{ og_url}}">
-    {{# TODO: Look into the og:type property more. It seems like more can be stated for articles. #}}
+    <meta property="og:url" content="{{ og_url }}">
+    {# TODO: Look into the og:type property more. It seems like more can be stated for articles. #}
     <meta property="og:type" content="article">
 
     <!-- Twitter Card -->
-    {{ # TODO: Look into the purpose of this. #}}
+    {# TODO: Look into the purpose of this. #}
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles.css">
+    <!-- Style Links -->
+    {# Based on assumptions for build path #}
+    {# TODO: Document this more later #}
+
+    <link rel="stylesheet" href="../static/css/global.css">
+    <link rel="stylesheet" href="../static/css/theme.css">
+    <link rel="stylesheet" href="../static/css/footer.css">
+    <link rel="stylesheet" href="../static/css/responsive.css">
+    <link rel="stylesheet" href="../static/css/theme-toggle.css">
+
+
+    <!-- HTML Links -->
+    {% include "links.html" %}
+
+    <!-- Scripts -->
+    <script src="static/js/footer.js"></script> 
+    <script src="static/js/theme-toggle.js"></script>
 </head>
 <body>
     <!-- Header -->
     {% include "header.html" %}
+    {% include "theme-toggle.html"%}
 
     <!-- Post Content -->
     <main>
